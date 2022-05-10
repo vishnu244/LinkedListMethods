@@ -43,9 +43,21 @@ while (true)
             Console.WriteLine("The elements in LinkedList are:");
             appendmethod.display();
             Console.WriteLine("\n");
-
-
             break;
+         case 4:
+            LLMethods<int> insertmethod = new();
+            insertmethod.AddNodeToFront(70);
+            insertmethod.AddNodeToFront(56);
+            Console.WriteLine("The elements in LinkedList are:");
+            insertmethod.display();
+            Console.WriteLine("\n");
+            Console.WriteLine("Inserting the Element '30' in between 56 and 70");
+            insertmethod.InsertMethod(30, 2);
+            Console.WriteLine("The final elements in LinkedList are:");
+            insertmethod.display();
+            Console.WriteLine("\n");
+            break;
+
 
         default:
             Console.WriteLine("please choose correct option!");
