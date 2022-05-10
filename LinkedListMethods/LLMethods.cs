@@ -11,10 +11,7 @@ namespace LinkedListMethods
         int count = 0;
         Node head;
 
-        public LLMethods()
-        {
-            head = null;
-        }
+        
         public void AddNodeToFront(int data)
         {
             Node node = new Node(data);
