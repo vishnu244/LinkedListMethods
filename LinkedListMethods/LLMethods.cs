@@ -19,6 +19,29 @@ namespace LinkedListMethods
             head = node;
             count++;
         }
+        public void AddNodeToLast(T Element)
+        {
+            Node<T> newNode = new Node<T>(Element);
+
+            newNode.data = Element;
+            newNode.next = null;
+            if (head == null)
+            {
+                head = newNode;
+            }
+
+            else
+            {
+
+                Node<T> temp = new Node<T>(Element);
+                temp = head;
+                while (temp.next != null)
+                    temp = temp.next;
+
+                temp.next = newNode;
+            }
+            count++;
+        }
 
         public void display()
         {
