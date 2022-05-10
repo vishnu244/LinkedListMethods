@@ -6,7 +6,7 @@ Console.WriteLine("Types of Linked List Methods!");
 
 while (true)
 {
-    Console.WriteLine("Select the Program to be Executed :\n1)Add from Start\n2)Add From End\n3)Append Method\n4)Insert Method");
+    Console.WriteLine("Select the Program to be Executed :\n1)Add from Start\n2)Add From End\n3)Append Method\n4)Insert Method\n5)Deleting Node");
     int Option = Convert.ToInt32(Console.ReadLine());
     switch (Option)
     {
@@ -62,12 +62,15 @@ while (true)
             deletemethod.AddNodeToFront(56);
             deletemethod.AddNodeToFront(30);
             deletemethod.AddNodeToFront(70);
+            Console.Write("The elements in LinkedList are:");            
             deletemethod.display();
+            Console.WriteLine("\n");
+            Console.WriteLine("Removing the Element '50' from the List");
             deletemethod.Pop(56);
+            Console.Write("The final elements in LinkedList are:");
             deletemethod.display();
+            Console.WriteLine("\n");
             break;
-
-
         default:
             Console.WriteLine("please choose correct option!");
             break;

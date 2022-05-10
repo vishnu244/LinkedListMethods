@@ -92,6 +92,7 @@ namespace LinkedListMethods
                 head = head.next;
                 tempnode = null;
             }
+            count--;
 
         }
 
