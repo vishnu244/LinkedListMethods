@@ -96,6 +96,23 @@ namespace LinkedListMethods
 
         }
 
+        public void removeLastNode()
+        {
+            if (head == null)
+                return;
+
+            if (head.next == null)
+            {
+                return;
+            }
+            // Find the second last node
+            Node<T> second_last = head;
+            while (second_last.next.next != null)
+                second_last = second_last.next;
+            // Change next of second last
+            second_last.next = null;
+        }
+
         public void display()
         {
             Node<T> temp = head;

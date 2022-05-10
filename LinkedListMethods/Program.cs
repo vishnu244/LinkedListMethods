@@ -6,7 +6,7 @@ Console.WriteLine("Types of Linked List Methods!");
 
 while (true)
 {
-    Console.WriteLine("Select the Program to be Executed :\n1)Add from Start\n2)Add From End\n3)Append Method\n4)Insert Method\n5)Deleting Node");
+    Console.WriteLine("Select the Program to be Executed :\n1)Add from Start\n2)Add From End\n3)Append Method\n4)Insert Method\n5)Deleting First Node\n6)Deleting Last Node");
     int Option = Convert.ToInt32(Console.ReadLine());
     switch (Option)
     {
@@ -69,6 +69,20 @@ while (true)
             deletemethod.Pop();
             Console.Write("The final elements in LinkedList are: ");
             deletemethod.display();
+            Console.WriteLine("\n");
+            break;
+        case 6:
+            LLMethods<int> deletemethodL = new();
+            deletemethodL.AddNodeToFront(56);
+            deletemethodL.AddNodeToFront(30);
+            deletemethodL.AddNodeToFront(70);
+            Console.Write("The elements in LinkedList are: ");
+            deletemethodL.display();
+            Console.WriteLine("\n");
+            Console.WriteLine("Removing the Last Element from the List.");
+            deletemethodL.removeLastNode();
+            Console.Write("The final elements in LinkedList are: ");
+            deletemethodL.display();
             Console.WriteLine("\n");
             break;
        
