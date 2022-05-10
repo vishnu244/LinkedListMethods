@@ -83,7 +83,7 @@ namespace LinkedListMethods
             }
         }
 
-        public void Pop(T data)
+        public void Pop()
         {
             Node<T> tempnode = head;
             if (head != null)

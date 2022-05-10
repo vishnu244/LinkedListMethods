@@ -62,15 +62,17 @@ while (true)
             deletemethod.AddNodeToFront(56);
             deletemethod.AddNodeToFront(30);
             deletemethod.AddNodeToFront(70);
-            Console.Write("The elements in LinkedList are:");            
+            Console.Write("The elements in LinkedList are: ");            
             deletemethod.display();
             Console.WriteLine("\n");
-            Console.WriteLine("Removing the Element '50' from the List");
-            deletemethod.Pop(56);
-            Console.Write("The final elements in LinkedList are:");
+            Console.WriteLine("Removing the First Element from the List.");
+            deletemethod.Pop();
+            Console.Write("The final elements in LinkedList are: ");
             deletemethod.display();
             Console.WriteLine("\n");
             break;
+       
+
         default:
             Console.WriteLine("please choose correct option!");
             break;
