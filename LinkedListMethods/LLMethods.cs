@@ -113,6 +113,43 @@ namespace LinkedListMethods
             second_last.next = null;
         }
 
+        public bool SearchMethod(int searchposition)
+        {
+            Node<T> temp = head;
+            int i = 0;
+            int found = 0;
+            bool status = false;
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty");
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    i++;
+                    if (temp.data.Equals(searchposition))
+                    {
+                        found++;
+                        break;
+                    }
+                    temp = temp.next;
+
+                }
+                if (found == 1)
+                {
+                    status = true;
+                    Console.WriteLine("Searching for the Element {0} in the list " , searchposition);
+                    Console.WriteLine("Node " + searchposition + " is found at position " + i + "\n");
+                }
+                else
+                {
+                    Console.WriteLine(searchposition + " Not found");
+                }
+            }
+            return status;
+        }
+
         public void display()
         {
             Node<T> temp = head;
