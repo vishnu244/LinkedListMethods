@@ -83,7 +83,19 @@ namespace LinkedListMethods
             }
         }
 
-            public void display()
+        public void Pop(T data)
+        {
+            Node<T> tempnode = head;
+            if (head != null)
+            {
+                tempnode = head;
+                head = head.next;
+                tempnode = null;
+            }
+
+        }
+
+        public void display()
         {
             Node<T> temp = head;
             while (temp != null)
