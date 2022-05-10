@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace LinkedListMethods
 {
-    public class Node
+    public class Node<T>
     {
-        public int data;
-        public Node next;
-
-        public Node(int x)
+        public T data;
+        public Node<T> next;
+        public Node(T Data)
         {
-            data = x;
-            next = null;
+
+            this.data = Data;
         }
     }
 }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace LinkedListMethods
 {
-    public class LLMethods
+    public class LLMethods<T>
     {
-        int count = 0;
-        Node head;
-
+        public int count = 0;
+        Node<T> head;
         
-        public void AddNodeToFront(int data)
+                   
+        public void AddNodeToFront(T data)
         {
-            Node node = new Node(data);
+            Node<T> node = new Node<T>(data);
             node.next = head;
             head = node;
             count++;
@@ -22,10 +22,10 @@ namespace LinkedListMethods
 
         public void display()
         {
-            Node temp = head;
+            Node<T> temp = head;
             while (temp != null)
             {
-                Console.WriteLine(temp.data);
+                Console.Write("->{0}" , temp.data);
                 temp = temp.next;
             }
         }
