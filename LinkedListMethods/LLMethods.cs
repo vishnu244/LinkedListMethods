@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedListMethods
 {
-    public class LLMethods<T>
+    public class LLMethods<T> where T : IComparable
     {
         public int count = 0;
         public Node<T> head;
@@ -194,6 +194,28 @@ namespace LinkedListMethods
             return found;
         }
 
+        public void SortedInsert(T data)
+        {
+            Node<T> current;
+            Node<T> newnode = new Node<T>(data);
+
+            if (head == null || (head.data.CompareTo(newnode.data) >= 0))
+            {
+                newnode.next = head;
+                head = newnode;
+            }
+            else
+            {
+                current = head;
+
+                while (current.next != null && (current.next.data.CompareTo(newnode.data)) < 0)
+                    current = current.next;
+
+                newnode.next = current.next;
+                current.next = newnode;
+            }
+
+        }
 
         public void display()
         {
