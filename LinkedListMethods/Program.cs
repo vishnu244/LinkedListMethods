@@ -6,7 +6,7 @@ Console.WriteLine("Types of Linked List Methods!");
 
 while (true)
 {
-    Console.WriteLine("Select the Program to be Executed :\n1)Add from Start\n2)Add From End\n3)Append Method\n4)Insert Method\n5)Deleting First Node\n6)Deleting Last Node\n7)Search Method\n8)Search and iinsert");
+    Console.WriteLine("Select the Program to be Executed :\n1)Add from Start\n2)Add From End\n3)Append Method\n4)Insert Method\n5)Deleting First Node\n6)Deleting Last Node\n7)Search Method\n8)Search and insert\n9)Search and delete");
     int Option = Convert.ToInt32(Console.ReadLine());
     switch (Option)
     {
@@ -106,7 +106,21 @@ while (true)
             searchandinsert.InsertAfter30(30, 40);
             searchandinsert.display();
             Console.WriteLine("\n");
-            break;      
+            break;
+        case 9:
+            LLMethods<int> searchandpop = new();
+            searchandpop.AddNodeToFront(56);
+            searchandpop.AddNodeToFront(30);
+            searchandpop.AddNodeToFront(40);
+            searchandpop.AddNodeToFront(70);
+            Console.Write("The elements in LinkedList are: ");
+            searchandpop.display();
+            Console.WriteLine("\n");
+            searchandpop.DeleteBetween(40);
+            searchandpop.display();
+            Console.WriteLine("\n");
+            break;
+
         default:
             Console.WriteLine("please choose correct option!");
             break;
