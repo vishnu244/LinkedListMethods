@@ -113,10 +113,12 @@ while (true)
             searchandpop.AddNodeToFront(30);
             searchandpop.AddNodeToFront(40);
             searchandpop.AddNodeToFront(70);
+            Console.WriteLine("Total number of elements Before deletion : " + searchandpop.count);
             Console.Write("The elements in LinkedList are: ");
             searchandpop.display();
             Console.WriteLine("\n");
             searchandpop.DeleteBetween(40);
+            Console.WriteLine("Total number of elements After deletion : " + searchandpop.count);
             searchandpop.display();
             Console.WriteLine("\n");
             break;

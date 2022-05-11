@@ -188,6 +188,7 @@ namespace LinkedListMethods
             {
                 previous = temp;
                 temp = temp.next;
+                count--;
             }
             found = 1;
             previous.next = temp.next;
