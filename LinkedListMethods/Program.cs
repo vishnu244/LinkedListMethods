@@ -94,10 +94,20 @@ while (true)
             searchemethod.display();
             Console.WriteLine("\n");
             searchemethod.SearchMethod(30);
+            break;
+        case 8:
+            LLMethods<int> searchandinsert = new();
+            searchandinsert.AddNodeToFront(56);
+            searchandinsert.AddNodeToFront(30);
+            searchandinsert.AddNodeToFront(70);
+            Console.Write("The elements in LinkedList are: ");
+            searchandinsert.display();
+            Console.WriteLine("\n");
+            searchandinsert.InsertAfter30(30, 40);
+            searchandinsert.display();
+            Console.WriteLine("\n");
 
             break;
-       
-
         default:
             Console.WriteLine("please choose correct option!");
             break;

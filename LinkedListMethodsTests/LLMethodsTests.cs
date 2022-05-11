@@ -14,13 +14,24 @@ namespace LinkedListMethods.Tests
         [TestMethod()]
         public void SearchTest()
         {
-            LLMethods<int> lLMethods = new ();
+            LLMethods<int> lLMethods = new();
             lLMethods.AddNodeToFront(70);
             lLMethods.AddNodeToFront(30);
             lLMethods.AddNodeToFront(56);
             lLMethods.SearchMethod(30);
             Assert.AreEqual(true, lLMethods.SearchMethod(30));
 
+        }
+
+        [TestMethod()]
+        public void InsertAfter30Test()
+        {
+            LLMethods<int> lLMethods = new();
+            lLMethods.AddNodeToFront(70);
+            lLMethods.AddNodeToFront(30);
+            lLMethods.AddNodeToFront(56);
+            lLMethods.InsertAfter30(30, 40);
+            Assert.AreEqual(1, lLMethods.InsertAfter30(30, 40));
         }
     }
 }
