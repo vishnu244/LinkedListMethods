@@ -179,6 +179,8 @@ namespace LinkedListMethods
             }
             return found;
         }
+
+
         public void display()
         {
             Node<T> temp = head;
